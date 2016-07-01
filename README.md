@@ -6,6 +6,6 @@ HbbPlayer is HbbTV application which can playback media by using url of media as
 
 To play video using HbbPlayer application, run HbbTV with parameter like this:
 
-'file://LOCAL_PATH_TO_APPLICATION/index.cehtml?url=URL_TO_VIDEO_FILE.mp4'
+`file://LOCAL_PATH_TO_APPLICATION/index.cehtml?url=URL_TO_VIDEO_FILE.mp4`
 
 Then player should parse URL and start playing the video.
