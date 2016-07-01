@@ -1,0 +1,427 @@
+body {
+	color: #fff;
+	margin: 0;
+	zoom: .666;
+}
+video {
+	height: 720px;
+	width: 1280px;
+}
+#controls #panel{
+	top: -195px;
+	height: 180px;
+	left: 0;
+	padding: 15px 27px 0 27px;
+	position: absolute;
+	width: 1866px;
+}
+#controls #panel.hidden {
+	top: -195px !important;
+	-webkit-transition: top .5s;
+	-moz-transition: top .5s;
+	-ms-transition: top .5s;
+	-o-transition: top .5s;
+	transition: top .5s;
+}
+#controls.rewind #panel,
+#controls.fastforward #panel,
+#controls.paused #panel,
+#controls.finished #panel,
+#controls.playing #panel {
+	top: 0;
+	-webkit-transition: top .5s;
+	-moz-transition: top .5s;
+	-ms-transition: top .5s;
+	-o-transition: top .5s;
+	transition: top .5s;
+}
+#controls  #toparea {
+	background-color: rgba(0, 0, 0, .7);
+	height: 80px;
+	overflow: hidden;
+	padding-top: 13px;
+	padding-bottom: 17px;
+	width: 1866px;
+}
+#bottomarea {
+	background-color: rgba(0, 0, 0, .7);
+	height: 54px;
+	overflow: hidden;
+	width: 1866px;
+	vertical-align: top;
+}
+#controls #infoarea {
+	display: inline-block;
+	padding-left: 40px;
+	width: 639px;
+	vertical-align: top;
+}
+#controls #control1area {
+	display: inline-block;
+	width: 450px;
+}
+#controls #info1line {
+	font-family: "SamsungOne 300";
+	font-size: 31px;
+	color: #b9e4ff;
+	height: 45px;
+	overflow: hidden;
+}
+#controls #info2line {
+	font-family: "SamsungOne 300";
+	font-size: 28px;
+	color: #fff;
+	height: 42px;
+	overflow: hidden;
+	opacity: .45;
+}
+#control1area > div,
+#control2area > div {
+	background-color: rgba(255, 255, 255, .1);
+	border: 2px solid rgba(255, 255, 255, .9);
+	box-shadow: 0px 0px 2px 1px rgba(0,0,0,.3) inset;
+	display: inline-block;
+	height: 75px;
+	margin-right: 9px;
+	-webkit-transition: background-color .5s;
+	-moz-transition: background-color .5s;
+	-ms-transition: background-color .5s;
+	-o-transition: background-color .5s;
+	transition: background-color .5s;
+	width: 75px;
+}
+#control1area > div:before {
+	background-size: 50%;
+	content: "";
+	width: 75px;
+	height: 75px;
+	position: absolute;
+}
+#controls .disabled:before {
+	opacity: .1;
+}
+#controls #control1area :focus  {
+	background-color: rgba(255, 255, 255, .8) !important;
+}
+#controls #debugbutton:focus,
+#controls #settingsbutton:focus {
+	background-color: rgba(255, 255, 255, .8) !important;
+}
+#control1area #previousbutton:before {
+	background: url("img/1080p.png") -70px 19px no-repeat;
+	transform: rotate(180deg);
+}
+#controls #fastforwardbutton:before,
+#controls #rewindbutton:before {
+	background: url("img/1080p.png") -69px 19px no-repeat;
+}
+#controls #rewindbutton:before {
+	transform: rotate(180deg);
+}
+#controls #playpausebutton:before,
+#controls.rewind #playpausebutton:before,
+#controls.fastforward #playpausebutton:before {
+	background: url("img/1080p.png") -151px 21px no-repeat;
+}
+#controls.playing #playpausebutton:before {
+	background: url("img/1080p.png") -231px 19px no-repeat;
+}
+#controls #nextbutton:before {
+	background: url("img/1080p.png") -70px 19px no-repeat;
+	margin-right: 0;
+}
+#controls #control2area {
+	display: inline-block;
+	width: 650px;
+}
+#debugbutton {
+	float: right;
+}
+#settingsbutton {
+	background: url("img/1080p.png") -93px -161px no-repeat;
+	float: right;	
+	height: 75px;
+	width: 75px;
+}
+#settingsmenu {
+	background: rgba(0,0,0,.95);
+	border: 2px solid rgba(255,255,255,.3);
+	color: rgba(255,255,255,.3);
+	font-size: 30px;
+	left: 1493px;
+	line-height: 60px;
+	position: absolute;
+	text-align: center;
+	top: 105px;
+	width: 300px;
+	z-index: 10;
+}
+#settingsmenu:focus {
+	background-color: #777;
+	border: 2px solid rgba(255,255,255,1);
+	color: rgba(255,255,255,1);
+}
+#controls #statusmodeicon {
+	display: inline-block;
+	height: 34px;
+	margin-left: 17px;
+	width: 105px;
+}
+#controls.playing #statusmodeicon {
+	background: url("img/1080p.png") -137px -1px no-repeat;
+}
+#controls.paused #statusmodeicon {
+	background: url("img/1080p.png") -217px -1px no-repeat;
+}
+#controls.fastforward #statusmodeicon.speed025,
+#controls.rewind #statusmodeicon.speed-025 {
+	background: url("img/1080p.png") -2px -130px no-repeat;
+}
+#controls.fastforward #statusmodeicon.speed05,
+#controls.rewind #statusmodeicon.speed-05 {
+	background: url("img/1080p.png") -108px -130px no-repeat;
+}
+#controls.fastforward #statusmodeicon.speed075,
+#controls.rewind #statusmodeicon.speed-075 {
+	background: url("img/1080p.png") -214px -130px no-repeat;
+}
+#controls.rewind #statusmodeicon.speed-025,
+#controls.rewind #statusmodeicon.speed-05,
+#controls.rewind #statusmodeicon.speed-075,
+#controls.rewind #statusmodeicon.speed-1,
+#controls.rewind #statusmodeicon.speed-2,
+#controls.rewind #statusmodeicon.speed-4 {
+	transform: rotate(180deg);
+}
+#controls.rewind #statusmodeicon.speed-1,
+#controls.fastforward #statusmodeicon.speed2{
+	background: url("img/1080p.png") 0 -70px no-repeat;
+}
+#controls.rewind #statusmodeicon.speed-2,
+#controls.fastforward #statusmodeicon.speed4{
+	background: url("img/1080p.png") -108px -70px no-repeat;
+}
+#controls.rewind #statusmodeicon.speed-4,
+#controls.fastforward #statusmodeicon.speed8{
+	background: url("img/1080p.png") -214px -70px no-repeat;
+}
+#controls #playtime,
+#controls #endtime {
+	color: #fff;
+	display: inline-block;
+	font-family: "SamsungOne 300";
+	font-size: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 8px;
+	margin-right: 28px;
+	opacity: .8;
+	text-align: right;
+	width: 106px;
+	vertical-align: 3px;
+}
+#controls #progressbarcontainer {
+	background-color: #fff;
+	display: inline-block;
+	height: 1px;
+	margin-top: 10px;
+	width: 1444px;
+	vertical-align: 7px;
+}
+#controls #progressbar {
+	background-color: #fff;
+	height: 2px;
+	position: absolute;
+	-webkit-transition: width .5s;
+	-moz-transition: width .5s;
+	-ms-transition: width .5s;
+	-o-transition: width .5s;
+	transition: width .5s;
+}
+#controls #progressdot{
+	position: relative;
+	-webkit-transition: left .5s;
+	-moz-transition: left .5s;
+	-ms-transition: left .5s;
+	-o-transition: left .5s;
+	transition: left .4s;
+}
+#controls #progressdot:after {
+	background: url("img/1080p.png") -215px -192px no-repeat;
+	content: "";
+	display: block;
+	height: 27px;
+	left: -3px;
+	position: relative;
+	top: -13px;
+	width: 27px;
+}
+#controls #progressdot:focus {
+	background: none;
+}
+#controls #progressdot:focus:after {
+	background: url("img/1080p.png") -352px -163px no-repeat;
+	content: "";
+	display: block;
+	height: 24px;
+	left: -11px;
+	position: relative;
+	top: -11px;
+	width: 24px;
+}
+#controls #endtime {
+	display: inline-block;
+	margin-left: 14px;
+
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+#controls #loader  {
+	background: url("img/1080p.png") -314px -10px no-repeat;
+	display: none;
+    -webkit-animation: spin 1.5s linear infinite;
+    -moz-animation: spin 1.5s linear infinite;
+    -ms-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+	height: 105px;
+	left: 930px;
+	position: absolute;
+	top: 720px;
+	width: 105px;
+}
+#controls #loader.visible{
+	display: block;
+}
+#error {
+	background: #000;
+	border: 1px solid white;
+	font-size: 30px;
+	margin: 300px auto;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+}
+#error #ok {
+	background: rgba(255,255,255,.5);
+	border: 1px solid rgba(255,255,255,1);
+	line-height: 60px;
+	font-size: 30px;
+	margin: 20px auto 10px;
+	text-align: center;
+	width: 250px;
+}
+#subtitlesmenu {
+	background: rgba(0,0,0,.9);
+	height: 450px;
+	margin: 0 auto;
+	width: 750px;
+}
+#subtitlesmenutitle {
+	background-color: rgba(255,255,255,.3);
+	color: #fff;
+	font-size: 40px;
+	line-height: 76px;
+	text-align: center;
+}
+#subtitlesmenudescription {
+	color: #fff;
+	font-size: 24px;
+	padding: 20px 0 0 30px;
+	text-align: center;
+	width: 540px;
+}
+
+#subtitlesmenuright {
+	margin: 10px 20px 0 0;
+	float: right;
+}
+#subtitlesmenuleft {
+	background: rgba(0,0,0,.6);
+	border: 1px solid rgba(255,255,255,.1);
+	height: 250px;
+	margin: 20px;
+	position: absolute;
+	vertical-align: top;
+	width: 450px;
+}
+#subtitlesmenuokbutton,
+#subtitlesmenucancelbutton {
+	background: rgba(255,255,255,.1);
+	border: 1px solid rgba(255,255,255,.1);
+	color: #fff;
+	line-height: 60px;
+	font-size: 25px;
+	text-align: center;
+	width: 220px;
+}
+#subtitlesmenucancelbutton {
+	margin-top: 5px;
+}
+#subtitlesmenuright :focus  {
+	background: rgba(255,255,255,.5);
+	border-color: rgba(255,255,255,1);
+}
+#subtitlesmenusubtitles, 
+#subtitlesmenulanguage {
+	border: 1px solid transparent;
+	color: rgba(255,255,255,.5);
+	font-size: 25px;
+	padding: 12px 25px;
+}
+#subtitlesmenuleft :focus {
+	background: rgba(255,255,255,.5);
+	border-color: rgba(255,255,255,1);
+	color: #fff;
+}
+#subtitlesmenuleft .submenufocused {
+	background: rgba(255,255,255,.1);
+	border-color: rgba(255,255,255,.2);
+	color: rgba(255,255,255,.8);
+}
+#subtitlesselectmenu {
+	background: rgba(0,0,0,.8);
+	color: white;
+	line-height: 43px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+}
+#subtitlesselectmenu  div {
+	border: 1px solid transparent;
+	padding-left: 10px;
+	
+}
+#subtitlesmenu .value {
+	float: right;
+}
+#menu {
+	background: rgba(0,0,0,.6);
+	bottom: 50px;
+	color: #fff;
+	font-size: 30px;
+	left: 500px;
+	line-height: 80px;
+	padding-left: 20px;
+	position: absolute;
+	width: 800px;
+}
+#options {
+	background: rgba(0,0,0,.8);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+#options .option {
+	border: 1px solid transparent;
+	padding-left: 20px;
+	padding-right: 150px;
+}
+#options .option:focus {
+	background: rgba(255,255,255,.2);
+	border: 1px solid #fff;
+}
+#options .option.selected {
+	color: blue;
+}
