@@ -100,33 +100,33 @@ video {
 	opacity: .1;
 }
 #controls #control1area :focus  {
-	background-color: rgba(255, 255, 255, 1) !important;
+	background-color: rgba(255, 255, 255, .8) !important;
 }
 #controls #debugbutton:focus,
 #controls #settingsbutton:focus {
 	background-color: rgba(255, 255, 255, .8) !important;
 }
 #control1area #previousbutton:before {
-	background: url("img/sprites.png") -2px 5px no-repeat;
+	background: url("img/720p.png") -94px 10px no-repeat;
 	transform: rotate(180deg);
 }
+#controls #rewindbutton:before,
+#controls #fastforwardbutton:before {
+	background: url("img/720p.png") 5px 10px no-repeat;
+}
 #controls #rewindbutton:before {
-	background: url("img/sprites.png") -69px 5px no-repeat;
 	transform: rotate(180deg);
 }
 #controls #playpausebutton:before,
 #controls.rewind #playpausebutton:before,
 #controls.fastforward #playpausebutton:before {
-	background: url("img/sprites.png") -141px 5px no-repeat;
+	background: url("img/720p.png") -201px 12px no-repeat;
 }
 #controls.playing #playpausebutton:before {
-	background: url("img/sprites.png") -205px 5px no-repeat;
-}
-#controls #fastforwardbutton:before {
-	background: url("img/sprites.png") -69px 5px no-repeat;
+	background: url("img/720p.png") -279px 11px no-repeat;
 }
 #controls #nextbutton:before {
-	background: url("img/sprites.png") -2px 5px no-repeat;
+	background: url("img/720p.png") -94px 10px no-repeat;
 	margin-right: 0;
 }
 #controls #control2area {
@@ -134,11 +134,11 @@ video {
 	width: 433px;
 }
 #debugbutton {
-	background: url("img/sprites.png") -347px -75px no-repeat;
+	background: url("img/720p.png") -16px -209px no-repeat;
 	float: right;
 }
 #settingsbutton {
-	background: url("img/sprites.png") -295px -75px no-repeat;
+	background: url("img/720p.png") -128px -206px no-repeat;
 	float: right;	
 	height: 53px;
 	width: 53px;
@@ -163,22 +163,22 @@ video {
 	width: 70px;
 }
 #controls.playing #statusmodeicon {
-	background: url("img/sprites.png") -141px -11px no-repeat;
+	background: url("img/720p.png") -177px -5px no-repeat;
 }
 #controls.paused #statusmodeicon {
-	background: url("img/sprites.png") -205px -11px no-repeat;
+	background: url("img/720p.png") -272px -5px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed025,
 #controls.rewind #statusmodeicon.speed-025 {
-	background: url("img/sprites.png") -2px -92px no-repeat;
+	background: url("img/720p.png") 3px -158px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed05,
 #controls.rewind #statusmodeicon.speed-05 {
-	background: url("img/sprites.png") -69px -92px no-repeat;
+	background: url("img/720p.png") -130px -158px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed075,
 #controls.rewind #statusmodeicon.speed-075 {
-	background: url("img/sprites.png") -146px -92px no-repeat;
+	background: url("img/720p.png") -248px -158px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-025,
 #controls.rewind #statusmodeicon.speed-05,
@@ -190,15 +190,15 @@ video {
 }
 #controls.rewind #statusmodeicon.speed-1,
 #controls.fastforward #statusmodeicon.speed2{
-	background: url("img/sprites.png") -2px -49px no-repeat;
+	background: url("img/720p.png") -24px -89px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-2,
 #controls.fastforward #statusmodeicon.speed4{
-	background: url("img/sprites.png") -69px -49px no-repeat;
+	background: url("img/720p.png") -130px -89px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-4,
 #controls.fastforward #statusmodeicon.speed8{
-	background: url("img/sprites.png") -146px -49px no-repeat;
+	background: url("img/720p.png") -247px -89px no-repeat;
 }
 #controls #playtime,
 #controls #endtime {
@@ -242,27 +242,27 @@ video {
 	transition: left .4s;
 }
 #controls #progressdot:after {
-	background: url("img/sprites.png") -235px -97px no-repeat;
+	background: url("img/720p.png") -264px -235px no-repeat;
 	content: "";
 	display: block;
-	height: 8px;
+	height: 10px;
 	left: -3px;
 	position: relative;
-	top: -3px;
-	width: 8px;
+	top: -4px;
+	width: 10px;
 }
 #controls #progressdot:focus {
 	background: none;
 }
 #controls #progressdot:focus:after {
-	background: url("img/sprites.png") -262px -89px no-repeat;
+	background: url("img/720p.png") -319px -230px no-repeat;
 	content: "";
 	display: block;
 	height: 24px;
 	left: -11px;
 	position: relative;
 	top: -11px;
-	width: 24px;
+	width: 25px;
 }
 #controls #endtime {
 	display: inline-block;
@@ -272,18 +272,18 @@ video {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 #controls #loader {
-	background: url("img/sprites.png") -278px -8px no-repeat;
+	background: url("img/720p.png") -395px -37px no-repeat;
 	display: none;
     -webkit-animation: spin 1.5s linear infinite;
     -moz-animation: spin 1.5s linear infinite;
     -ms-animation: spin 1.5s linear infinite;
     -o-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
-	height: 48px;
-	left: 620px;
+	height: 70px;
+	left: 600px;
 	position: absolute;
 	top: 350px;
-	width: 48px;
+	width: 70px;
 }
 #controls #loader.visible{
 	display: block;

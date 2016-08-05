@@ -1,0 +1,68 @@
+#debug {
+	background-color: rgba(255, 255, 255, .8);
+	height: 500px;
+	left: 27px;
+	overflow: hidden;
+	padding: 10px;
+	position: absolute;
+	top: 180px;
+	width: 1206px;
+	z-index: 9999;
+}
+#debugconsole {
+	float: right;
+	height: 474px;
+	overflow-y: scroll;
+	width: 900px;
+}
+#debugconsole .log,
+#debugconsole .warn,
+#debugconsole .error,
+#debugconsole .blue {
+	padding-left: 5px;
+}
+#debugconsole .warn{
+	background-color: rgba(255, 140, 0, .8);
+}
+#debugconsole .error{
+	background-color: rgba(255, 0, 0, .8);
+}
+#debugconsole .blue{
+	background-color: rgba(0, 0, 255, .8);
+}
+#debughelpbar {
+	clear: both;
+	padding-top: 7px;
+	background-color: rgba(0,0,0,.5);
+	padding-bottom: 8px;
+	padding-left: 600px;
+}
+#debughelpgreen,
+#debughelpyellow,
+#debughelpblue {
+	width: 50px;
+	background-color: green;
+	display: inline-block;
+	height: 20px;
+	margin-right: 150px;
+}
+#debughelpyellow {
+	background-color: yellow;
+}
+#debughelpblue {
+	background-color: blue;
+}
+#debughelpgreen:after,
+#debughelpyellow:after,
+#debughelpblue:after {
+	content: "clear logs";
+	display: inline-block;
+	margin-left: 60px;
+	width: 100px;
+}
+#debughelpyellow:after {
+	content: "scroll up";
+}
+#debughelpblue:after {
+	content: "scroll down";
+}

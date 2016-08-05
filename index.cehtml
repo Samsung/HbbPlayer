@@ -1,4 +1,4 @@
-<!-------------------------------------------------------------------------------- 
+<!--
  *
  * Copyright (c) 2016, Samsung Electronics Co., Ltd
  *
@@ -20,57 +20,88 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- -------------------------------------------------------------------------------->
+-->
 
+<!--
+	sample URL for HbbPlayer
+	hbbplayer.cehtml?url=http://some.url/to.movie&amp;type=playerType
+	parameters: 
+		url - URL to video content
+		type - type of player that shall be used,
+		 		possible values: AVObject player, html5 (only for HbbTV profile 2.0)
+-->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script type="text/javascript" src="controls.js"></script>
-	<script type="text/javascript" src="controls-debug.js"></script>
     <script type="text/javascript">
         //<![CDATA[
-		function getAVObjectUrl() {
+
+		function parseURL() {
 			var search,
-				position,
-				phase = "url=";
+				parts,
+				parsedURL = {},
+				temp,
+				i;
 
 			search = window.location.search.substr(1);
-			position = search.indexOf(phase);
-			return search.substr(position + phase.length);
+			parts = search.split('&');
+			for (i = 0; i < parts.length; i++) {
+				temp = parts[i].split('=');
+				parsedURL[temp[0]] = temp[1];
+			}
+
+			return parsedURL;
+		}
+
+		function createAVPlayer(url) {
+			var player;
+			
+			player = document.createElement("object");
+			player.setAttribute("type", "video/mp4");
+			player.setAttribute("data", url);
+
+			document.body.appendChild(player);
+
+			player.setFullScreen(true);
+			player.play(1);
+		}
+
+		/**
+		 * HTML5 video tag can be used only in HbbTV 2.0 profile
+		 * @param url
+		 */
+		function createVideoPlayer(url) {
+			var player, source;
+			
+			player = document.createElement("video");
+			source = document.createElement("source");
+			source.src = url;
+			source.type = "video/mp4";
+			player.appendChild(source);
+
+			player.autoplay = true;
+
+			document.body.appendChild(player);
 		}
 
         window.onload = function() {
-			var url;
-			
+			var parsedURL;
+
 			appManager = oipfObjectFactory.createApplicationManagerObject();
 			app = appManager.getOwnerApplication(document);
 			app.show();
-			url = getAVObjectUrl();
-			
-			createAVPlayer(url);
+			parsedURL = parseURL();
 
-			controls.init();
-        }
-		
-		function createAVPlayer(url) {
-			AVPlayer = document.createElement("object");
-			AVPlayer.setAttribute("id", "AVPlayer");
-			AVPlayer.setAttribute("type", "video/mp4");
-			AVPlayer.setAttribute("data", url);
+			if (parsedURL.type === "html5" && navigator.userAgent.substring(navigator.userAgent.indexOf("HbbTV/")+8, navigator.userAgent.indexOf(" ", navigator.userAgent.indexOf("HbbTV/")))*1 >= 3.1) {
+				createVideoPlayer(parsedURL.url);
+			} else {
+				createAVPlayer(parsedURL.url);
+			}
 
-			document.body.appendChild(AVPlayer);
+			controls.initialize();
+        };
 
-			AVPlayer.setFullScreen(true);
-			AVPlayer.play(1);
-		}
-		
-		function createVideoPlayer(url) {
-			VPlayer = document.createElement("video");
-			VPlayer.src = url;
-			VPlayer.autoplay = true;
-			
-			document.body.appendChild(VPlayer);
-		}
         //]]>
     </script>
 </head>
