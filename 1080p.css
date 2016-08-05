@@ -1,7 +1,6 @@
 body {
 	color: #fff;
 	margin: 0;
-	zoom: .666;
 }
 video {
 	height: 720px;
@@ -108,12 +107,12 @@ video {
 	background-color: rgba(255, 255, 255, .8) !important;
 }
 #control1area #previousbutton:before {
-	background: url("img/1080p.png") -70px 19px no-repeat;
+	background: url("img/1080p.png") -82px 21px no-repeat;
 	transform: rotate(180deg);
 }
 #controls #fastforwardbutton:before,
 #controls #rewindbutton:before {
-	background: url("img/1080p.png") -69px 19px no-repeat;
+	background: url("img/1080p.png") 19px 21px no-repeat;
 }
 #controls #rewindbutton:before {
 	transform: rotate(180deg);
@@ -121,24 +120,25 @@ video {
 #controls #playpausebutton:before,
 #controls.rewind #playpausebutton:before,
 #controls.fastforward #playpausebutton:before {
-	background: url("img/1080p.png") -151px 21px no-repeat;
+	background: url("img/1080p.png") -189px 23px no-repeat;
 }
 #controls.playing #playpausebutton:before {
-	background: url("img/1080p.png") -231px 19px no-repeat;
+	background: url("img/1080p.png") -265px 24px no-repeat;
 }
 #controls #nextbutton:before {
-	background: url("img/1080p.png") -70px 19px no-repeat;
+	background: url("img/1080p.png") -80px 22px no-repeat;
 	margin-right: 0;
 }
 #controls #control2area {
 	display: inline-block;
-	width: 650px;
+	width: 700px;
 }
 #debugbutton {
+	background: url("img/1080p.png") -3px -196px no-repeat;
 	float: right;
 }
 #settingsbutton {
-	background: url("img/1080p.png") -93px -161px no-repeat;
+	background: url("img/1080p.png") -115px -194px no-repeat;
 	float: right;	
 	height: 75px;
 	width: 75px;
@@ -163,27 +163,27 @@ video {
 }
 #controls #statusmodeicon {
 	display: inline-block;
-	height: 34px;
+	height: 33px;
 	margin-left: 17px;
 	width: 105px;
 }
 #controls.playing #statusmodeicon {
-	background: url("img/1080p.png") -137px -1px no-repeat;
+	background: url("img/1080p.png") -160px 2px no-repeat;
 }
 #controls.paused #statusmodeicon {
-	background: url("img/1080p.png") -217px -1px no-repeat;
+	background: url("img/1080p.png") -262px 2px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed025,
 #controls.rewind #statusmodeicon.speed-025 {
-	background: url("img/1080p.png") -2px -130px no-repeat;
+	background: url("img/1080p.png") 15px -151px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed05,
 #controls.rewind #statusmodeicon.speed-05 {
-	background: url("img/1080p.png") -108px -130px no-repeat;
+	background: url("img/1080p.png") -118px -151px no-repeat;
 }
 #controls.fastforward #statusmodeicon.speed075,
 #controls.rewind #statusmodeicon.speed-075 {
-	background: url("img/1080p.png") -214px -130px no-repeat;
+	background: url("img/1080p.png") -236px -151px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-025,
 #controls.rewind #statusmodeicon.speed-05,
@@ -195,15 +195,15 @@ video {
 }
 #controls.rewind #statusmodeicon.speed-1,
 #controls.fastforward #statusmodeicon.speed2{
-	background: url("img/1080p.png") 0 -70px no-repeat;
+	background: url("img/1080p.png") 16px -82px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-2,
 #controls.fastforward #statusmodeicon.speed4{
-	background: url("img/1080p.png") -108px -70px no-repeat;
+	background: url("img/1080p.png") -118px -82px no-repeat;
 }
 #controls.rewind #statusmodeicon.speed-4,
 #controls.fastforward #statusmodeicon.speed8{
-	background: url("img/1080p.png") -214px -70px no-repeat;
+	background: url("img/1080p.png") -235px -82px no-repeat;
 }
 #controls #playtime,
 #controls #endtime {
@@ -218,7 +218,7 @@ video {
 	opacity: .8;
 	text-align: right;
 	width: 106px;
-	vertical-align: 3px;
+	vertical-align: 8px;
 }
 #controls #progressbarcontainer {
 	background-color: #fff;
@@ -226,7 +226,7 @@ video {
 	height: 1px;
 	margin-top: 10px;
 	width: 1444px;
-	vertical-align: 7px;
+	vertical-align: 18px;
 }
 #controls #progressbar {
 	background-color: #fff;
@@ -247,11 +247,11 @@ video {
 	transition: left .4s;
 }
 #controls #progressdot:after {
-	background: url("img/1080p.png") -215px -192px no-repeat;
+	background: url("img/1080p.png") -257px -226px no-repeat;
 	content: "";
 	display: block;
-	height: 27px;
-	left: -3px;
+	height: 35px;
+	left: -8px;
 	position: relative;
 	top: -13px;
 	width: 27px;
@@ -260,14 +260,14 @@ video {
 	background: none;
 }
 #controls #progressdot:focus:after {
-	background: url("img/1080p.png") -352px -163px no-repeat;
+	background: url("img/1080p.png") -312px -224px no-repeat;
 	content: "";
 	display: block;
-	height: 24px;
-	left: -11px;
+	height: 35px;
+	left: -16px;
 	position: relative;
-	top: -11px;
-	width: 24px;
+	top: -17px;
+	width: 35px;
 }
 #controls #endtime {
 	display: inline-block;
@@ -277,18 +277,18 @@ video {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 #controls #loader  {
-	background: url("img/1080p.png") -314px -10px no-repeat;
+	background: url("img/1080p.png") -366px -6px no-repeat;
 	display: none;
     -webkit-animation: spin 1.5s linear infinite;
     -moz-animation: spin 1.5s linear infinite;
     -ms-animation: spin 1.5s linear infinite;
     -o-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
-	height: 105px;
-	left: 930px;
+	height: 130px;
+	left: 900px;
 	position: absolute;
-	top: 720px;
-	width: 105px;
+	top: 500px;
+	width: 130px;
 }
 #controls #loader.visible{
 	display: block;
