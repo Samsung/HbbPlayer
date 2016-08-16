@@ -6,8 +6,11 @@ HbbPlayer is HbbTV application which can playback media by using url of media as
 
 To play video using HbbPlayer application, run HbbTV with parameter like this:
 
-`http://UTL_TO_HBBPLAYER/index.cehtml?url=URL_TO_VIDEO_FILE.mp4`
+`http://UTL_TO_HBBPLAYER/index.cehtml?url=URL_TO_VIDEO_FILE.mp4;type=PLAYER_TYPE`
 
-To play DASH stream, url will be 'URL_TO_DASH.mpd'.
+To play DASH stream, 'url' will be 'URL_TO_DASH.mpd'.
 
 Then player should parse URL and start playing the video.
+
+'type' is a parameter of player type that shall be used.
+>possible values : AVObject player, html5 (only for HbbTV profile 2.0)
