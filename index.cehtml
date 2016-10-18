@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
  *
  * Copyright (c) 2016, Samsung Electronics Co., Ltd
@@ -30,9 +31,10 @@
 		type - type of player that shall be used,
 		 		possible values: AVObject player, html5 (only for HbbTV profile 2.0)
 -->
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>HbbPlayer</title>
 	<script type="text/javascript" src="controls.js"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -93,7 +95,7 @@
 			app.show();
 			parsedURL = parseURL();
 
-			if (parsedURL.type === "html5" && navigator.userAgent.substring(navigator.userAgent.indexOf("HbbTV/")+8, navigator.userAgent.indexOf(" ", navigator.userAgent.indexOf("HbbTV/")))*1 >= 3.1) {
+			if (parsedURL.type === "html5" && parseFloat(navigator.userAgent.substring(navigator.userAgent.indexOf("HbbTV/")+8, navigator.userAgent.indexOf(" ", navigator.userAgent.indexOf("HbbTV/")))) >= 3.1) {
 				createVideoPlayer(parsedURL.url);
 			} else {
 				createAVPlayer(parsedURL.url);
