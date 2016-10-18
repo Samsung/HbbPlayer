@@ -30,7 +30,7 @@ controls = {
 		/**
 		 * after this time controls will hide automatically, in milliseconds
 		 */
-		visibilityTime: 500000,
+		visibilityTime: 5000,
 		language: {
 			/**
 			 * default language values
