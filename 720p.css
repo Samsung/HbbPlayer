@@ -6,6 +6,12 @@ video {
 	height: 720px;
 	width: 1280px;
 }
+#appManager {
+	height: 0;
+	position: absolute;
+	visibility: hidden;
+	width: 0;
+}
 #controls  #panel {
 	top: -135px;
 	height: 120px;
