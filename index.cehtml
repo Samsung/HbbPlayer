@@ -90,7 +90,15 @@
         window.onload = function() {
 			var parsedURL;
 
-			appManager = oipfObjectFactory.createApplicationManagerObject();
+			if (typeof oipfObjectFactory == "undefined") {	// workaround for WebBrowsers
+				appManager = document.createElement("object");
+				appManager.type = "application/oipfApplicationManager";
+				appManager.id = "appManager";
+				document.body.appendChild(appManager);
+			} else {
+				appManager = oipfObjectFactory.createApplicationManagerObject();
+			}
+
 			app = appManager.getOwnerApplication(document);
 			app.show();
 			parsedURL = parseURL();
