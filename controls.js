@@ -1068,6 +1068,9 @@ controls = {
 				case 417:
 					keyName = "FastForward";
 					break; 
+				case 461:
+					keyName = "Return";
+					break;
 				case 404:
 					keyName = "VK_GREEN";
 					controls.debug.clearLogs();
