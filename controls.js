@@ -488,6 +488,9 @@ controls = {
 				case 461:
 					controls.remoteController.press("return");
 					break;
+				case 463:
+					controls.action.playPause();
+					break;
 				}
 			}, false);
 		},
