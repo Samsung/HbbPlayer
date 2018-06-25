@@ -81,10 +81,9 @@
 			source.src = url;
 			source.type = "video/mp4";
 			player.appendChild(source);
-
-			player.autoplay = true;
-
+		
 			document.body.appendChild(player);
+			player.play();
 		}
 
         window.onload = function() {
